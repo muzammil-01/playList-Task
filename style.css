@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Orbitron&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+iframe {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+button {
+  background-color: #47a386;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  padding: 10px 25px;
+}
+h1 {
+  color: #47a386;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.modal-container {
+  background-color: rgba(0, 0, 0, .8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: opacity 0.3s ease;
+}
+.modal {
+  border-radius: 5px;
+  padding: 30px 50px;
+  width: 40vw;
+  /* max-width: 100%; */
+  text-align: center;
+}
+
+.modal-container.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+.modal-container.remove {
+  pointer-events: none;
+  opacity: 0;
+}
+.content-body {
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px;
+  width: 50%;
+  border-bottom: 2px solid;
+  margin: 20px auto;
+}
+li,
+a,
+.button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px 50px;
+  background-color: lightgray;
+}
+.inputs {
+  list-style: none;
+}
+.inputs li {
+  display: inline;
+  padding: 0px 5px;
+}
+input[type="text"] {
+  width: 300px;
+}
+input {
+  padding: 10px;
+  border: none;
+  background-color: white;
+  font-size: 16px;
+  color: black;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+}
+.vidtitle{
+  width: 80%;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .header{
+    flex-direction: column !important;
+  }
+  .inputs{
+    margin-top: 20px;
+  }
+  #toggleMode{
+    margin-top: 20px;
+  }
+  .modal{
+    width: 50%;
+  }
+}
+@media screen and (max-width: 880px) and (min-width: 10px){
+  .inputs li {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    padding: 0px 5px;
+  }
+ }
+ 
+ @media screen and (max-width: 1280px) {
+  .content-body{
+    display: block;
+    text-align: center;
+  }
+  .vidtitle{
+    padding: 10px 10px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+ }
+
+@media screen and (max-width:600px){
+  .modal{
+    width: 100%;
+  }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+   <!-- =================================== header ==================================== -->
+    <div class="header">
+      <h1><i class="fas fa-play"></i> playVideos</h1>
+      <nav>
+        <ul class="inputs">
+          <li><input type="text" placeholder="Enter title" id="title"/></li>
+          <li><input type="text" placeholder="Youtube/Dailymotion/vimeo" id="link"/></li>
+          <li><button id="click">Add to playlist</button></li>
+        </ul>
+      </nav>
+      <button id="toggleMode">Enable Dark Mode</button>
+    </div>
+
+    <!-- ================================= main-content =============================== -->
+    <div class="content-container">
+    </div>
+
+    <!-- ================================= video modal ====================================== -->
+    <div class="modal-container" id="modal_container">
+      <div class="modal">
+        <iframe
+          id="vid"
+          width="560"
+          height="315"
+          src=""
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <br />
+        <button id="close">Close</button>
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
